@@ -16,7 +16,7 @@ import {
 import {
   Grid,
 } from '@material-ui/core';
-import {testGenerator} from '../../lib/testGenerator';
+import {dataGenerator} from '../../lib/dataGenerator';
 
 
 const validationSchema = yup.object({
@@ -36,12 +36,10 @@ export const MainGrid = () => {
   const [cefficientRange, setCoefficientRange] = useState([1.5, 2.5]);
 
   useEffect(() => {
-    setTimeout(() => {
       document.body.style.overflow = "auto";
       const loading = document.getElementById('loading');
       if (loading) {loading.remove();}
     }, [])
-    }, 1500);
 
   const formik = useFormik({
       initialValues: {
@@ -50,7 +48,7 @@ export const MainGrid = () => {
       validationSchema: validationSchema,
       onSubmit: ({balance}) => {
         balance = +balance;
-        testGenerator(betData, setBetData, balance, betCounts,
+        dataGenerator(betData, setBetData, balance, betCounts,
           winrate, betPercent, cefficientRange
         );
       },
