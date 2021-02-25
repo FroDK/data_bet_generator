@@ -1,0 +1,76 @@
+/* BG COLOR #282C35 */
+/* BG COLOR DRK #21252b */
+/* THEME COLOR #6494ed */
+/* TITLE COLOR #d7dae0 */
+/* TEXT COLOR #9da5b4 */
+/* BEAUTIFUL GRADIENT BG
+background: linear-gradient(44.98deg, #267DE1 1.23%, #FE76F9 107.13%); */
+
+.App {
+  padding: 0;
+  margin: 2rem auto;
+  width: 80%;
+  min-width: 650px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 7px 0px rgba(50, 50, 50, 0.15);
+  background-color: white;
+  color: #32454c !important;
+}
+
+label {
+  color: #32454c;
+  display: block;
+  width: min-content;
+  white-space: nowrap;
+  margin-bottom: 5px;
+}
+
+.title-block {
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.title-block__text {
+  font-size: 30px;
+  color: #32454c;
+}
+
+.content-block {
+  height: 100%;
+  padding: 1rem 1.2rem;
+}
+
+.title-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .7rem;
+}
+
+.settings-text {
+  display: block;
+  font-size: 24px;
+  /* font-weight: bold; */
+  padding-left: .4rem;
+}
+
+/* .icon {
+  color: rgb(54, 162, 235);
+} */
+@media screen and (max-width: 1024px) {
+  .App {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .App {
+    width: 100%;
+    min-width: 100%;
+  }
+  .content-block {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+  }
+}

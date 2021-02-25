@@ -1,0 +1,46 @@
+$font-color: #32454c;
+$theme-color: #1e88e5;
+
+header {
+	height: 60px;
+	background-color: white;
+	box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, .1);
+	color: $font-color;
+	padding: 0 15px;
+	border-bottom: 1px solid rgba(0,0,0,.15);
+}
+
+nav {
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.nav-brand {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	font-size: 24px;
+	cursor: pointer;
+	transition: all .2s;
+	margin-right: 2rem;
+}
+
+.nav-item {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	font-size: 20px;
+	cursor: pointer;
+	transition: all .2s;
+	margin: 0 1rem;
+
+	&:hover {
+		color: $theme-color;
+	}
+
+	&[disabled] {
+		pointer-events: none;
+		color: #999;
+	}
+}
