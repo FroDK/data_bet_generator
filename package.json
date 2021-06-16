@@ -13,7 +13,6 @@
     "classnames": "^2.2.6",
     "formik": "^2.2.6",
     "history": "^5.0.0",
-    "node-sass": "^4.14.1",
     "random": "^2.2.0",
     "random-js": "^2.1.0",
     "react": "^17.0.1",

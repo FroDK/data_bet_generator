@@ -1,69 +1,53 @@
 .grid-item {
   padding-right: 1.2rem;
 }
-
 .grid-chart {
   height: 90vh;
   width: 100%;
 }
-
 .grid-button {
   width: 130px;
   position: fixed;
   bottom: 20px;
-
-  button {
-    box-shadow: 0px 0px 14px 4px rgba(29, 96, 204, 0.4) !important;
-  }
 }
-
+.grid-button button {
+  box-shadow: 0 0 14px 4px rgba(29, 96, 204, 0.4) !important;
+}
 .value {
   font-weight: bold;
 }
-
 .value-data {
   font-weight: bold;
 }
-
 .grid-data {
   width: 100%;
-  padding: .8rem;
+  padding: 0.8rem;
   margin-bottom: 1rem;
 }
-
 .title-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: .7rem 0 1.2rem 0;
+  padding: 0.7rem 0 1.2rem 0;
 }
-
 .grid-data__title {
   display: block;
   font-size: 24px;
-  // font-weight: bold;
-  padding-left: .4rem;
+  padding-left: 0.4rem;
 }
-
-// .icon {
-//   color: rgb(54, 162, 235);
-// }
-
 @media screen and (max-width: 600px) {
   .grid-item {
     padding: 0;
   }
-
   .grid-button {
     left: 0;
     bottom: 0;
     width: 100%;
-
-    button {
-      height: 10vh !important;
-      font-size: 1.5rem !important;
-      border-radius: 0 !important;
-      box-shadow: 0 0 0 0 black !important;
-    }
+  }
+  .grid-button button {
+    height: 10vh !important;
+    font-size: 1.5rem !important;
+    border-radius: 0 !important;
+    box-shadow: 0 0 0 0 black !important;
   }
 }

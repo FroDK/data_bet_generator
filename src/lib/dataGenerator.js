@@ -1,8 +1,8 @@
 import { Random, MersenneTwister19937 } from "random-js";
 const random = new Random(MersenneTwister19937.autoSeed());
 
-export const testGenerator = (betData, setBetData, balance, betCounts,
-  winrate, betPercent, cefficientRange) => {
+export const dataGenerator = (betData, setBetData, balance, betCounts,
+                              winrate, betPercent, cefficientRange) => {
 
   betPercent = betPercent / 100;
   winrate = winrate / 100;
@@ -22,7 +22,7 @@ export const testGenerator = (betData, setBetData, balance, betCounts,
   const obj = {}
   arr.forEach((e, i) => {
       obj[i + 1] = {
-          isWin: e ? true : false,
+          isWin: !!e,
           cf: +random.real(cefficientRange[0], cefficientRange[1]).toFixed(2)
       }
   })
@@ -41,7 +41,7 @@ export const testGenerator = (betData, setBetData, balance, betCounts,
   })
   dataMoneys.unshift(copyBalance);
 
-  dataMoneys.forEach((e, i) => {
+  dataMoneys.forEach(e => {
       const percent = Math.round(100 * e / copyBalance - 100);
       dataProfit.push(Math.round(e - copyBalance));
       dataBets.push(percent);
@@ -73,7 +73,7 @@ export const testGenerator = (betData, setBetData, balance, betCounts,
   let x = 0;
   const middleCF = Math.round((dataCF.map(i=>x+=i).reverse()[0])/dataCF.length*100)/100;
 
-  const betSum = dataCurrentBets.reduce((sum, el, i) => {
+  const betSum = dataCurrentBets.reduce((sum, el) => {
     return sum + el;
   })
   const middleBet = Math.round(betSum/(dataCurrentBets.length-1)*100)/100;
